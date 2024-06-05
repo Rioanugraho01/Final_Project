@@ -9,10 +9,9 @@
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Money</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">Data User</p>
                 <h5 class="font-weight-bolder mb-0">
-                  $53,000
-                  <span class="text-success text-sm font-weight-bolder">+55%</span>
+                  5 Orang
                 </h5>
               </div>
             </div>
@@ -31,10 +30,9 @@
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Users</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">Data Beasiswa Terbaru</p>
                 <h5 class="font-weight-bolder mb-0">
-                  2,300
-                  <span class="text-success text-sm font-weight-bolder">+3%</span>
+                  5 Data
                 </h5>
               </div>
             </div>
@@ -53,10 +51,9 @@
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">New Clients</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">Beasiswa Di input</p>
                 <h5 class="font-weight-bolder mb-0">
-                  +3,462
-                  <span class="text-danger text-sm font-weight-bolder">-2%</span>
+                  50 Data
                 </h5>
               </div>
             </div>
@@ -75,10 +72,9 @@
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Sales</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">Perusahaan Bergabung</p>
                 <h5 class="font-weight-bolder mb-0">
-                  $103,430
-                  <span class="text-success text-sm font-weight-bolder">+5%</span>
+                  5 Perusahaan
                 </h5>
               </div>
             </div>
@@ -122,6 +118,7 @@
                       </g>
                     </svg>
                   </div>
+                  {{-- dihhapus --}}
                   <p class="text-xs mt-1 mb-0 font-weight-bold">Users</p>
                 </div>
                 <h4 class="font-weight-bolder">36K</h4>
@@ -204,11 +201,13 @@
                   <div class="progress-bar bg-dark w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
+              {{-- dihapus end --}}
             </div>
           </div>
         </div>
       </div>
     </div>
+    {{-- diagram bulan (batang) --}}
     <div class="col-lg-7">
       <div class="card z-index-2">
         <div class="card-header pb-0">
@@ -226,8 +225,9 @@
       </div>
     </div>
   </div>
+  {{-- diagram tahunan (grafik) --}}
   <div class="row my-4">
-    <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+    <div class="col-lg-10 col-md-8 mb-md-0 mb-4">
       <div class="card">
         <div class="card-header pb-0">
           <div class="row">
@@ -497,75 +497,6 @@
                 </tr>
               </tbody>
             </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6">
-      <div class="card h-100">
-        <div class="card-header pb-0">
-          <h6>Orders overview</h6>
-          <p class="text-sm">
-            <i class="fa fa-arrow-up text-success" aria-hidden="true"></i>
-            <span class="font-weight-bold">24%</span> this month
-          </p>
-        </div>
-        <div class="card-body p-3">
-          <div class="timeline timeline-one-side">
-            <div class="timeline-block mb-3">
-              <span class="timeline-step">
-                <i class="ni ni-bell-55 text-success text-gradient"></i>
-              </span>
-              <div class="timeline-content">
-                <h6 class="text-dark text-sm font-weight-bold mb-0">$2400, Design changes</h6>
-                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">22 DEC 7:20 PM</p>
-              </div>
-            </div>
-            <div class="timeline-block mb-3">
-              <span class="timeline-step">
-                <i class="ni ni-html5 text-danger text-gradient"></i>
-              </span>
-              <div class="timeline-content">
-                <h6 class="text-dark text-sm font-weight-bold mb-0">New order #1832412</h6>
-                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21 DEC 11 PM</p>
-              </div>
-            </div>
-            <div class="timeline-block mb-3">
-              <span class="timeline-step">
-                <i class="ni ni-cart text-info text-gradient"></i>
-              </span>
-              <div class="timeline-content">
-                <h6 class="text-dark text-sm font-weight-bold mb-0">Server payments for April</h6>
-                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">21 DEC 9:34 PM</p>
-              </div>
-            </div>
-            <div class="timeline-block mb-3">
-              <span class="timeline-step">
-                <i class="ni ni-credit-card text-warning text-gradient"></i>
-              </span>
-              <div class="timeline-content">
-                <h6 class="text-dark text-sm font-weight-bold mb-0">New card added for order #4395133</h6>
-                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">20 DEC 2:20 AM</p>
-              </div>
-            </div>
-            <div class="timeline-block mb-3">
-              <span class="timeline-step">
-                <i class="ni ni-key-25 text-primary text-gradient"></i>
-              </span>
-              <div class="timeline-content">
-                <h6 class="text-dark text-sm font-weight-bold mb-0">Unlock packages for development</h6>
-                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">18 DEC 4:54 AM</p>
-              </div>
-            </div>
-            <div class="timeline-block">
-              <span class="timeline-step">
-                <i class="ni ni-money-coins text-dark text-gradient"></i>
-              </span>
-              <div class="timeline-content">
-                <h6 class="text-dark text-sm font-weight-bold mb-0">New order #9583120</h6>
-                <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">17 DEC</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

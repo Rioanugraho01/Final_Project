@@ -118,13 +118,6 @@
             <hr class="mt-4">
         </div>
         <div class="container">
-            <p style="font-size: 25px;"><b>Sasaran</b></p>
-            <p>Sasaran program adalah perempuan lulusan SMA/SMK/MA/sederajat di Indonesia yang memenuhi kriteria masuk PTN
-                terakreditasi A atau B tahun 2024, <br>memiliki gagasan untuk berkontribusi di masyarakat, bermotivasi
-                tinggi, dan berprestasi namun memiliki keterbatasan finansial. </p>
-            <hr class="mt-4">
-        </div>
-        <div class="container">
             <p style="font-size: 25px;"><b>Persyaratan</b></p>
             <p>1. Siswi kelas 12 atau lulusan SMA/SMK/MA/sederajat 3 tahun terakhir yang dapat mendaftar seleksi masuk PTN
                 tahun 2024. <br>2. Siswi mendaftarkan diri melalui salah satu jalur: <br><span class="ps-4">- Seleksi
@@ -164,6 +157,7 @@
                 media online seperti telepon atau video call.</p>
             <hr class="mt-4">
         </div>
+        {{-- masuk ke mekanisme --}}
         <div class="container">
             <p style="font-size: 25px;"><b>Jadwal Beasiswa</b></p>
             <p>Pendaftaran: 22 Maret s/d 31 Mei 2024 <br>Seleksi Berkas: 1 Juni – 12 Juli 2024 <br>Seleksi Interview & Home

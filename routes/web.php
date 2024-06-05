@@ -4,6 +4,7 @@ use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InfoUserController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ResetController;
 use App\Http\Controllers\SessionsController;
@@ -24,20 +25,15 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/signup', function () {
-	return view('auth.register');
-});
-
 Route::group(['middleware' => 'auth'], function () {
 
-	Route::get('/dashboard', function () {
-		return view('dashboard');
-	})->middleware('role:admin')-> name('dashboard');
-	
-
+	// menampilkan halaman menu admin 
 	Route::get('billing', function () {
 		return view('billing');
 	})->name('billing');
+
+	Route::get('/user-profile', [InfoUserController::class, 'create']);
+	Route::post('/user-profile', [InfoUserController::class, 'store']);
 
 	Route::get('user-management', function () {
 		return view('laravel-examples/user-management');
@@ -46,33 +42,36 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('tables', function () {
 		return view('tables');
 	})->name('tables');
+	// end
 
+	// logout admin dan user
     Route::get('/logout', [SessionsController::class, 'destroy']);
-	Route::get('/user-profile', [InfoUserController::class, 'create']);
-	Route::post('/user-profile', [InfoUserController::class, 'store']);
-    Route::get('/login', function () {
-		return view('dashboard');
-	})->name('sign-up');
+	// end
+
+// login
+Route::get('/login', function () {
+	return view('dashboard');
+})->name('sign-up');
 });
+// end
 
+// menuju halaman dashboard admin
+Route::get('/dashboard', function () {
+	return view('dashboard');
+})->middleware('role:admin')-> name('dashboard');
+// end
 
-
-Route::group(['middleware' => 'guest'], function () {
-    // Route::get('/register', [RegisterController::class, 'create']);
-    // Route::post('/register', [RegisterController::class, 'store']);
-    Route::get('/login', [SessionsController::class, 'create']);
-    Route::post('/session', [SessionsController::class, 'store']);
-	Route::get('/login/forgot-password', [ResetController::class, 'create']);
-	Route::post('/forgot-password', [ResetController::class, 'sendEmail']);
-	Route::get('/reset-password/{token}', [ResetController::class, 'resetPass'])->name('password.reset');
-	Route::post('/reset-password', [ChangePasswordController::class, 'changePassword'])->name('password.update');
-
+// menuju halaman register dan login
+Route::get('/signup', function () {
+	return view('auth.register');
 });
 
 Route::get('/login', function () {
-    return view('session/login-session');
+    return view('auth/login');
 })->name('login');
+// end
 
+// menuju halaman user
 Route::get('/', [App\Http\Controllers\PublicController::class, 'awal'])->name('awal');
 Route::get('/about', [App\Http\Controllers\PublicController::class, 'about'])->name('about');
 Route::middleware('auth')->get('/menu', [App\Http\Controllers\PublicController::class, 'menu'])->name('menu');
@@ -82,6 +81,6 @@ Route::get('/motivasi', [App\Http\Controllers\PublicController::class, 'motivasi
 Route::get('/s1', [App\Http\Controllers\PublicController::class, 's1'])->name('s1');
 Route::get('/s2', [App\Http\Controllers\PublicController::class, 's2'])->name('s2');
 Route::get('/s3', [App\Http\Controllers\PublicController::class, 's3'])->name('s3');
-Auth::routes();
+// end
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
