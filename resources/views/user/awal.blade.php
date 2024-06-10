@@ -205,7 +205,7 @@
     </style>
 
     {{-- Section Rectangel Beasiswa --}}
-    <section class="container-fluid text-dark rounded-5 mt-4" style="background-color: #141E27; width: 87%; height: 600px;">
+    <section class="container-fluid text-dark rounded-5 mt-3" style="background-color: #141E27; width: 87%; height: 600px;">
         <div class="row d-flex justify-content-around ms-3">
             <div class="col-md-6">
                 <div class="bg-transparent py-5 ms-5">
@@ -219,7 +219,7 @@
                                 <br>Mulai langkah pertama menuju masa depan yang indah.
                             </p>
                             <div class="pt-2">
-                                <a href=""><button>Learn More
+                                <a href="menu"><button>Learn More
                                     <div class="star-1">
                                         <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
                                             style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"

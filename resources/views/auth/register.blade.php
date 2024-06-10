@@ -1,8 +1,8 @@
 @extends('user-app.app')
 
 @section('content')
- <style>
-    /* Tampilan Login */
+    <style>
+        /* Login Form Styles */
         .form-group {
             position: relative;
             margin-bottom: 25px;
@@ -58,7 +58,7 @@
             font-weight: bold;
         }
 
-        /* transisi login */
+        /* Login Animation */
         @keyframes moveLeft {
             0% { transform: translateX(100%); }
             100% { transform: translateX(0); }
@@ -68,7 +68,6 @@
             animation: moveLeft 1.5s ease-in-out;
         }
 
-        /* Transisi Gambar */
         @keyframes moveDown {
             0% { transform: translateY(-100%); }
             100% { transform: translateY(0); }
@@ -78,12 +77,13 @@
             animation: moveDown 1.5s ease-in-out;
         }
 
+        /* Additional Styles */
         .form-group .icon {
             position: absolute;
             right: 10px;
             top: 50%;
             transform: translateY(-50%);
-            pointer-events: none; /* make the icon not clickable */
+            pointer-events: none;
         }
     </style>
     <section class="container pt-5 mt-2">
@@ -91,43 +91,41 @@
             <div class="col-6 mb-5 pt-5"><img class="img-fluid move-down" src="{{ asset('assets/register.svg') }}"></div>
             <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
                 <div class="rounded-5 move-left" style="background-color: #141E27; width: 636px; height: 750px;">
-                    <p class="text-light fw-lighter text-center" style="margin-top: 50px;">Logo BeFind</p>
-                    <p class="text-light text-center"
-                        style="font-family: Platypi, serif; font-size: 30px; margin-top: 60px;">Join for a New Experience.</p>
+                    <p class="text-light text-center" style="font-family: Platypi, serif; font-size: 30px; margin-top: 100px;">Join for a New Experience.</p>
                     <p class="text-light fw-lighter text-center">Create your account</p>
-                    <form role="form" method="POST" action="{{route('register')}}">
+                    <form role="form" method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-md-8">
-                                    <div class="form-group d-flex justify-content-between">
-                                        <input class="text-light" type="text" id="text" name="text" required>
-                                        <label class="text-light" for="text">Username</label>
+                                    <div class="form-group">
+                                        <input class="text-light" type="text" id="username" name="username" required>
+                                        <label class="text-light" for="username">Username</label>
                                         @error('username')
                                             <p class="text-danger text-xs mt-2">{{ $message }}</p>
                                         @enderror
                                     </div>
-                                    <div class="form-group d-flex justify-content-between">
+                                    <div class="form-group">
                                         <input class="text-light" type="email" id="email" name="email" required>
                                         <label class="text-light" for="email">Email</label>
                                         @error('email')
                                             <p class="text-danger text-xs mt-2">{{ $message }}</p>
                                         @enderror
                                     </div>
-                                    <div class="form-group d-flex justify-content-between">
+                                    <div class="form-group">
                                         <input class="text-light" type="text" id="age" name="age" required>
                                         <label class="text-light" for="age">Age</label>
                                         @error('age')
                                             <p class="text-danger text-xs mt-2">{{ $message }}</p>
                                         @enderror
                                     </div>
-                                    <div class="form-group d-flex justify-content-between">
-                                        <input class="text-light" type="text" id="number" name="number" required>
+                                    <div class="form-group">
+                                        <input class="text-light" type="tel" id="number" name="number" required>
                                         <label class="text-light" for="number">Phone Number</label>
-                                        @error('phone number')
+                                        @error('number')
                                             <p class="text-danger text-xs mt-2">{{ $message }}</p>
                                         @enderror
-                                    </div>                            
+                                    </div>                          
                                     <div class="form-group">
                                         <input class="text-light" type="password" id="password" name="password" required>
                                         <label class="text-light" for="password">Password</label>
@@ -136,11 +134,8 @@
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <input class="text-light" type="password" id="password" name="password_confirmation" required>
-                                        <label class="text-light" for="password">Confirm Password</label>
-                                        @error('confirm password')
-                                            <p class="text-danger text-xs mt-2">{{ $message }}</p>
-                                        @enderror
+                                        <input class="text-light" type="password" id="password_confirmation" name="password_confirmation" required>
+                                        <label class="text-light" for="password_confirmation">Confirm Password</label>
                                     </div>
                                     <div class="pt-3">
                                         <button type="submit" class="btn btn-outline-light btn-block" style="width: 400px;">Register</button>
@@ -172,10 +167,6 @@
                     element.classList.remove("visible");
                 }
             });
-
-            const form = document.querySelector("form");
-            form.addEventListener("submit", function (e) {
-            });
         }
 
         function isElementInViewport(el) {
@@ -191,6 +182,5 @@
         const form = document.querySelector("form");
         form.addEventListener("submit", function (e) {
         });
-
     </script>
 @endsection

@@ -4,7 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Laravel\Socialite\Facades\Socialite;
+use Exception;
+use App\Models\User;
+
 
 class LoginController extends Controller
 {
@@ -21,6 +26,7 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
+
     /**
      * Where to redirect users after login.
      *
@@ -33,6 +39,66 @@ class LoginController extends Controller
      *
      * @return void
      */
+
+
+    public function showLoginForm()
+    {
+        return view('auth.login');
+    }
+
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials, $request->remember)) {
+            return redirect()->intended('dashboard');
+        }
+
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
+    }
+
+    public function redirectToGoogle()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    public function handleGoogleCallback()
+    {
+        try {
+            $user = Socialite::driver('google')->user();
+            $existingUser = User::where('email', $user->email)->first();
+
+            if ($existingUser) {
+                Auth::login($existingUser);
+            } else {
+                $newUser = new User();
+                $newUser->name = $user->name;
+                $newUser->email = $user->email;
+                $newUser->save();
+
+                Auth::login($newUser);
+            }
+
+            return redirect('/menu');
+        } catch (Exception $e) {
+            // Handle exception
+            return redirect()->route('login')->with('error', 'Login with Google failed. Please try again.');
+        }
+    }
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
@@ -40,11 +106,11 @@ class LoginController extends Controller
     }
 
     public function authenticated(Request $request, $user)
-{
-    if ($user->hasRole('admin')) {
-        return view('dashboard');
-    }
+    {
+        if ($user->hasRole('admin')) {
+            return view('dashboard');
+        }
 
-    return redirect()->route('menu');
-}
+        return redirect()->route('menu');
+    }
 }

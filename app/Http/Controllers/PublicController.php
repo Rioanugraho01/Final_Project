@@ -51,4 +51,29 @@ class PublicController extends Controller
     {
         return view('user.motivasi');
     }
+
+    public function detail_tips()
+    {
+        return view('user.detail-tips');
+    }
+
+    public function detail_motivasi()
+    {
+        return view('user.detail-motivasi');
+    }
+
+    public function detail_s1()
+    {
+        return view('user.detail-s1');
+    }
+
+    public function detail_s2()
+    {
+        return view('user.detail-s2');
+    }
+
+    public function detail_s3()
+    {
+        return view('user.detail-s3');
+    }
 }

@@ -36,6 +36,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Z1M4tP3I+IOr3BdpbH/DmHi+oXZBqYaV8T8Vu2/Sx33o7nb+tUe2q1sUm5VIyHMPmXh92H51M3yL+xTYf/60TQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Scripts -->
 </head>
 <style>
@@ -57,7 +60,7 @@
     {{-- Navbar --}}
     <nav class="navbar navbar-expand-lg">
         <div class="container d-flex justify-content-center pt-4">
-            <a class="navbar-brand" href="welcome">Logo BeFind</a>
+            <a href=""><img src="/assets/logoo.png" class="img-fluid" style="width: 100px; height: auto;" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -73,11 +76,11 @@
                             Beasiswa
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="s1">Beasiswa S1</a></li>
+                            <li><a class="dropdown-item" href="menu">Beasiswa S1</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="s2">Beasiswa S2</a></li>
+                            <li><a class="dropdown-item" href="menu">Beasiswa S2</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="s3">Beasiswa S3</a></li>
+                            <li><a class="dropdown-item" href="menu">Beasiswa S3</a></li>
                         </ul>
                     </li>
                     <p class="nav-item">
@@ -92,7 +95,7 @@
                 <div class="d-flex justify-content-end gap-3 fade-in">
                     @if (Route::has('login'))
                     @auth
-                    <a href="{{ url('/logout')}}" class="nav-link text-body font-weight-bold px-0">
+                    <a href="{{ url('/logout')}}" class="nav-link text-body font-weight-bold px-0 mx-3">
                         <i class="fa fa-user me-sm-1"></i>
                         <span class="d-sm-inline d-none">Sign Out</span>
                     </a>

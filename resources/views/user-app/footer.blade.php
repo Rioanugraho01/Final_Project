@@ -61,9 +61,9 @@
 
 <footer class="footer text-dark mt-5 animated-element">
     <div class="container">
-        <div class="row d-flex justify-content-beetween">
+        <div class="row d-flex justify-content-center">
             <div class="col-md-2">
-                <img src="/assets/befind.png" class="img-fluid" style="width: 250px; height: auto;" alt="">
+                <img src="/assets/logoo.png" class="img-fluid" style="width: 250px; height: auto;" alt="">
             </div>
             <div class="col-md-3">
                 <h5 class="pt-5"><b>BeasiswaFinder</b></h5>
@@ -98,11 +98,9 @@
             <div class="col-md-2">
                 <h5 class="pt-5"><b>Kategori Beasiswa</b></h5>
                 <div class="list-unstyled pt-2">
-                    <p><a href="#" class="text-decoration-none text-secondary">Beasiswa Ikatan Dinas</a></p>
-                    <p><a href="#" class="text-decoration-none text-secondary">Beasiswa S1</a></p>
-                    <p><a href="#" class="text-decoration-none text-secondary">Beasiswa S2</a></p>
-                    <p><a href="#" class="text-decoration-none text-secondary">Beasiswa S3</a></p>
-                    <p><a href="#" class="text-decoration-none text-secondary">Beasiswa LPDP</a></p>
+                    <p><a href="menu" class="text-decoration-none text-secondary">Beasiswa S1</a></p>
+                    <p><a href="menu" class="text-decoration-none text-secondary">Beasiswa S2</a></p>
+                    <p><a href="menu" class="text-decoration-none text-secondary">Beasiswa S3</a></p>
                 </div>
             </div>
             <div class="col-md-2">
@@ -110,15 +108,13 @@
                 <div class="list-unstyled pt-2">
                     <p><a href="#" class="text-decoration-none text-secondary">Beasiswa Uggulan</a></p>
                     <p><a href="#" class="text-decoration-none text-secondary">Beasiswa di Indonesia</a></p>
-                    <p><a href="#" class="text-decoration-none text-secondary">Beasiswa di Eropa</a></p>
-                    <p><a href="#" class="text-decoration-none text-secondary">Beasiswa di Asia</a></p>
                 </div>
             </div>
             <div class="col-md-2">
                 <h5 class="pt-5"><b>Tentang Kami</b></h5>
                 <div class="list-unstyled pt-2">
-                    <p><a href="#" class="text-decoration-none text-secondary">Profil Kami</a></p>
-                    <p><a href="#" class="text-decoration-none text-secondary">Hubungi Kami</a></p>
+                    <p><a href="about" class="text-decoration-none text-secondary">Profil Kami</a></p>
+                    <p><a href="about" class="text-decoration-none text-secondary">Hubungi Kami</a></p>
                     <p><a href="#" class="text-decoration-none text-secondary">Syarat & Ketentuan</a></p>
                     <p><a href="#" class="text-decoration-none text-secondary">Kebijakan Privasi</a></p>
                 </div>

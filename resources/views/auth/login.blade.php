@@ -1,8 +1,8 @@
 @extends('user-app.app')
+
 @section('content')
     <style>
-
-        /* Tampilan login */
+        /* Login Form Styles */
         .form-group {
             position: relative;
             margin-bottom: 25px;
@@ -58,7 +58,7 @@
             font-weight: bold;
         }
 
-        /* transisi login */
+        /* Login Animation */
         @keyframes moveLeft {
             0% { transform: translateX(100%); }
             100% { transform: translateX(0); }
@@ -68,7 +68,6 @@
             animation: moveLeft 1.5s ease-in-out;
         }
 
-        /* Transisi Gambar */
         @keyframes moveDown {
             0% { transform: translateY(-100%); }
             100% { transform: translateY(0); }
@@ -77,17 +76,38 @@
         .move-down {
             animation: moveDown 1.5s ease-in-out;
         }
+
+        /* Eye Icon Styles */
+        .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .eye-icon i {
+            cursor: pointer;
+        }
+
+        .show-password-icon {
+            color: white;
+        }
     </style>
     <section class="container pt-5 mt-2">
         <div class="row">
             <div class="col-6 mb-5 pt-5"><img class="img-fluid move-down" src="{{ asset('assets/login.svg') }}"></div>
             <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
                 <div class="rounded-5 move-left" style="background-color: #141E27; width: 636px; height: 750px;">
-                    <p class="text-light fw-lighter text-center" style="margin-top: 50px;">Logo BeFind</p>
-                    <p class="text-light text-center"
-                        style="font-family: Platypi, serif; font-size: 35px; margin-top: 100px;">Good to see you again!</p>
+                    <p class="text-light text-center" style="font-family: Platypi, serif; font-size: 35px; margin-top: 150px;">Good to see you again!</p>
                     <p class="text-light fw-lighter text-center">Login your account</p>
-                    <form role="form" method="POST" action="{{route('login')}}">
+                    @if(session('register-success'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('register-success') }}
+                        </div>
+                    @endif
+
+                    <form role="form" method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="container">
                             <div class="row justify-content-center">
@@ -96,34 +116,37 @@
                                         <input class="text-light" type="email" id="email" name="email" required>
                                         <label class="text-light" for="email">Email</label>
                                         @error('email')
-                                        <p class="text-danger text-xs mt-2">{{ $message }}</p>
+                                            <p class="text-danger text-xs mt-2">{{ $message }}</p>
                                         @enderror
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group position-relative">
                                         <input class="text-light" type="password" id="password" name="password" required>
                                         <label class="text-light" for="password">Password</label>
+                                        <div class="eye-icon" onclick="togglePasswordVisibility()">
+                                            <i class="fas fa-eye show-password-icon"></i>
+                                        </div>
                                         @error('password')
-                                        <p class="text-danger text-xs mt-2">{{ $message }}</p>
+                                            <p class="text-danger text-xs mt-2">{{ $message }}</p>
                                         @enderror
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <div class="mb-3 form-check">
-                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                            <label class="form-check-label text-light" for="exampleCheck1">Reminder Me</label>
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1" name="remember">
+                                            <label class="form-check-label text-light" for="exampleCheck1">Remember Me</label>
                                         </div>
                                         <div class="mb-3">
-                                            <a href="#" class="text-secondary">Forget Password?</a>
+                                            <a href="#" class="text-secondary">Forgot Password?</a>
                                         </div>
                                     </div>
                                     <div class="pt-3">
-                                        <a href="#"><button type="submit" class="btn btn-outline-light btn-block" style="width: 400px;">Login</button></a>
+                                        <button type="submit" class="btn btn-outline-light btn-block" style="width: 400px;">Login</button>
                                     </div>
                                     <div class="or-divider">
                                         <hr>
                                         <p>or</p>
                                         <hr>
                                     </div>
-                                    <button type="submit" class="btn btn-outline-light btn-block" style="width: 400px;"><i class="fab fa-google" style="margin-right: 5px;"></i> Login with Google</button>
+                                    <a href="{{ route('google.login') }}" class="btn btn-outline-light btn-block" style="width: 400px;"><i class="fab fa-google" style="margin-right: 5px;"></i> Login with Google</a>
                                 </div>
                             </div>
                         </div>
@@ -134,33 +157,18 @@
     </section>
     @include('user-app.footer')
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            animateOnScroll();
-        });
-
-        window.addEventListener("scroll", function() {
-            animateOnScroll();
-        });
-
-        function animateOnScroll() {
-            var animatedElements = document.querySelectorAll(".animated-element");
-            animatedElements.forEach(function(element) {
-                if (isElementInViewport(element)) {
-                    element.classList.add("visible");
-                } else {
-                    element.classList.remove("visible");
-                }
-            });
-        }
-
-        function isElementInViewport(el) {
-            var rect = el.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var eyeIcon = document.querySelector(".eye-icon i");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.classList.remove("fa-eye");
+                eyeIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.classList.remove("fa-eye-slash");
+                eyeIcon.classList.add("fa-eye");
+            }
         }
     </script>
 @endsection

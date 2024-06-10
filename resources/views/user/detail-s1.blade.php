@@ -93,7 +93,7 @@
     <section class="pt-3">
         <div class="container-fluid" style="background-image: url('/assets/animasi.svg'); width: 100%; height: 250px;">
             <header class="text-center">
-                <h1 class="text-light" style="padding-top: 80px; font-family: Poetsen One, sans-serif;">Detail Beasiswa</h1>
+                <h1 class="text-light" style="padding-top: 80px; font-family: Poetsen One, sans-serif;">Detail Beasiswa S1</h1>
             </header>
         </div>
     </section>
@@ -255,3 +255,4 @@
     </section>
     @include('user-app.footer')
 @endsection
+
