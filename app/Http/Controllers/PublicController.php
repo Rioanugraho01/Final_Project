@@ -76,4 +76,19 @@ class PublicController extends Controller
     {
         return view('user.detail-s3');
     }
+
+    public function profile()
+    {
+        return view('user.profile');
+    }
+
+    public function simpan()
+    {
+        return view('user.simpan');
+    }
+
+    public function add()
+    {
+        return view('add');
+    }
 }

@@ -115,7 +115,7 @@
   </div>
   {{-- diagram tahunan (grafik) --}}
   <div class="row my-4">
-    <div class="col-md-8 mb-md-0 mb-4" style="width: 1385px;">
+    <div class="col-md-10 mb-md-0 mb-4">
       <div class="card">
         <div class="card-header pb-0">
           <div class="row">

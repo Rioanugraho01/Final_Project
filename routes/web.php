@@ -3,9 +3,10 @@
 use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InfoUserController;
-use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ResetController;
 use App\Http\Controllers\SessionsController;
 use Illuminate\Http\Request;
@@ -86,17 +87,31 @@ Route::get('/detail-motivasi', [App\Http\Controllers\PublicController::class, 'd
 Route::get('/detail-s1', [App\Http\Controllers\PublicController::class, 'detail_s1'])->name('detail-tips');
 Route::get('/detail-s2', [App\Http\Controllers\PublicController::class, 'detail_s2'])->name('detail-tips');
 Route::get('/detail-s3', [App\Http\Controllers\PublicController::class, 'detail_s3'])->name('detail-tips');
+Route::get('/profile', [App\Http\Controllers\PublicController::class, 'profile'])->name('profile');
+Route::get('/simpan', [App\Http\Controllers\PublicController::class, 'simpan'])->name('simpan');
+Route::get('/add', [App\Http\Controllers\PublicController::class, 'add'])->name('simpan');
 // end
 
-Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
-Route::post('login', [LoginController::class, 'login']);
-Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+// autentikasi login dan register
+Route::get('register', [AuthController::class, 'showRegisterForm'])->name('register');
+Route::post('register', [AuthController::class, 'register']);
+Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-Route::post('register', [RegisterController::class, 'register']);
+Route::get('/home', function () {
+    return view('dashboard');
+})->middleware('auth');
+// end
 
+// profile
+Route::get('/profile', [ProfileController::class, 'showProfile'])->name('profile');
+Route::post('/profile', [ProfileController::class, 'updateProfile'])->name('profile.update');
+// end
 
 // sign in google
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login', [LoginController::class, 'login']);
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('login/google', [LoginController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('login/google/callback', [LoginController::class, 'handleGoogleCallback'])->name('google.callback');

@@ -102,11 +102,10 @@
                     <p class="text-light text-center" style="font-family: Platypi, serif; font-size: 35px; margin-top: 150px;">Good to see you again!</p>
                     <p class="text-light fw-lighter text-center">Login your account</p>
                     @if(session('register-success'))
-                        <div class="alert alert-success" role="alert">
+                        <div class="alert alert-success" role="alert" style="width: 400px; margin-left: 120px; font-size: 13px;">
                             {{ session('register-success') }}
                         </div>
                     @endif
-
                     <form role="form" method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="container">

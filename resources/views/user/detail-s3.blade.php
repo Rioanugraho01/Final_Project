@@ -251,6 +251,15 @@
                     </svg>
                 </label>
             </div>
+            <div class="mt-4">
+                <h4>Berikan Komentar Anda 🙂</h4>
+                <form id="commentForm">
+                    <div class="form-group" style="width: 300px;">
+                        <textarea class="form-control" id="studentComment" rows="3" placeholder="Write your comment here..." required></textarea>
+                    </div>
+                    <a href=""><button type="submit" class="btn btn-dark mt-3">Submit Comment</button></a>
+                </form>
+            </div>
         </article>
     </section>
     @include('user-app.footer')

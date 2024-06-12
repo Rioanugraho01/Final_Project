@@ -25,42 +25,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poetsen+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poetsen+One&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poetsen+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poetsen+One&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Z1M4tP3I+IOr3BdpbH/DmHi+oXZBqYaV8T8Vu2/Sx33o7nb+tUe2q1sUm5VIyHMPmXh92H51M3yL+xTYf/60TQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-Z1M4tP3I+IOr3BdpbH/DmHi+oXZBqYaV8T8Vu2/Sx33o7nb+tUe2q1sUm5VIyHMPmXh92H51M3yL+xTYf/60TQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </head>
 <style>
     .fade-in {
+        opacity: 0;
+        animation: fadeIn 1s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
             opacity: 0;
-            animation: fadeIn 1s ease-in forwards;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        to {
+            opacity: 1;
         }
+    }
 </style>
+
 <body class="fade-in" style="background-color: #EEEDDE">
     {{-- Navbar --}}
     <nav class="navbar navbar-expand-lg">
         <div class="container d-flex justify-content-center pt-4">
-            <a href=""><img src="/assets/logoo.png" class="img-fluid" style="width: 100px; height: auto;" alt=""></a>
+            <a href=""><img src="/assets/logoo.png" class="img-fluid" style="width: 100px; height: auto;"
+                    alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -69,17 +85,22 @@
             <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
                 <div class="navbar-nav mt-3 mb-lg-0 gap-3">
                     <p class="nav-item">
-                        <a class="nav-link fw-medium" href="{{url('about')}}">About</a>
+                        <a class="nav-link fw-medium" href="{{ url('about') }}">About</a>
                     </p>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             Beasiswa
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="menu">Beasiswa S1</a></li>
-                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                             <li><a class="dropdown-item" href="menu">Beasiswa S2</a></li>
-                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                             <li><a class="dropdown-item" href="menu">Beasiswa S3</a></li>
                         </ul>
                     </li>
@@ -89,20 +110,35 @@
                     <p class="nav-item">
                         <a class="nav-link fw-medium" href="motivasi">Motivasi</a>
                     </p>
+                    @if (Route::has('login'))
+                        @auth
+                        <div class="collapse navbar-collapse mb-3" id="navbarSupportedContent">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" style="border-color: black;" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-dark" type="submit">Search</button>
+                            </form>
+                        </div>
+                        @endauth
+                    @endif
                 </div>
             </div>
             <div>
                 <div class="d-flex justify-content-end gap-3 fade-in">
                     @if (Route::has('login'))
-                    @auth
-                    <a href="{{ url('/logout')}}" class="nav-link text-body font-weight-bold px-0 mx-3">
-                        <i class="fa fa-user me-sm-1"></i>
-                        <span class="d-sm-inline d-none">Sign Out</span>
-                    </a>
-                    @else
-                    <a href="{{url('signup')}}"><button  class=" btn btn-outline-dark text-center">Register</button></a>
-                    <a href="login"><button  class=" btn btn-outline-dark text-center">Login</button></a>
-                    @endauth
+                        @auth
+                            <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user me-sm-1"></i>
+                                <span>Hello, {{ Auth::user()->username }}</span>
+                            </button>
+                            <div class="dropdown-menu mt-5" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="profile">Profile</a>
+                                <a class="dropdown-item" href="{{ url('/logout') }}">Logout</a>
+                            </div>
+                        @else
+                            <a href="{{ url('signup') }}"><button
+                                    class=" btn btn-outline-dark text-center">Register</button></a>
+                            <a href="login"><button class=" btn btn-outline-dark text-center">Login</button></a>
+                        @endauth
                     @endif
                 </div>
             </div>
@@ -112,4 +148,5 @@
         @yield('content')
     </main>
 </body>
+
 </html>
