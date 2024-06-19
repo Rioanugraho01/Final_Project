@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
@@ -17,11 +18,12 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
+        Log::info('Register Request Data:', $request->all());
         $validator = Validator::make($request->all(), [
-            'username' => 'required|string|max:255',
+            'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'age' => 'required|integer',
-            'number' => 'required|string|max:15',
+            'phone_number' => 'required|string|max:15',
             'password' => 'required|string|min:8|confirmed',
         ]);
 
@@ -30,12 +32,12 @@ class AuthController extends Controller
         }
 
         $user = User::create([
-            'username' => $request->username,
+            'name' => $request->name,
             'email' => $request->email,
             'age' => $request->age,
-            'number' => $request->number,
+            'phone_number' => $request->phone_number,
             'password' => Hash::make($request->password),
-            'role' => 'user', // Default role, adjust if needed
+            'role' => 'user',
         ]);
 
         return redirect()->route('login')->with('register-success', 'Anda Berhasil Melakukan Register, Harap Login.');
@@ -50,7 +52,7 @@ class AuthController extends Controller
     {
         $user = Auth::user();
         if ($user->role === 'admin') {
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('dashboard');
         } else {
             return redirect()->intended('/user/menu');
         }

@@ -26,7 +26,7 @@ class User extends Authenticatable
      * @var string[]
      */
     protected $fillable = [
-        'username', 'email', 'age', 'number', 'password',
+        'name', 'email', 'age', 'phone_number', 'password', 'google_id',
     ];
 
     /**
@@ -49,8 +49,14 @@ class User extends Authenticatable
     ];
 
     public function isAdmin()
-{
-    return $this->role === 'admin';
-}
+    {
+        return $this->role === 'admin';
+    }
+
     
+
+    public function bookmarks()
+    {
+        return $this->belongsToMany(Beasiswa::class, 'bookmarks', 'user_id', 'beasiswa_id')->withTimestamps();
+    }
 }

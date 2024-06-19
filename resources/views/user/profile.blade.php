@@ -74,40 +74,37 @@
     </style>
     <section class="container pt-5 mt-2">
         <div class="row justify-content-center">
-            <div class="col-6 mb-5 pt-5"><img class="img-fluid move-down" src="{{ asset('assets/profile.svg') }}"></div>
+            <div class="col-6 mb-5 pt-5"><img class="img-fluid move-down" src="{{ asset('assets/profile.svg') }}" alt="Profile Image"></div>
             <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
                 <div class="rounded-5 move-left" style="background-color: #141E27; width: 636px; height: 750px;">
-                    <p class="text-light text-center"
-                        style="font-family: Platypi, serif; font-size: 30px; margin-top: 70px;">This Is Your Profile Page.
-                    </p>
+                    <p class="text-light text-center" style="font-family: Platypi, serif; font-size: 30px; margin-top: 70px;">This Is Your Profile Page.</p>
                     <p class="text-light fw-lighter text-center">Custom Your Profile.</p>
                     <form action="{{ route('profile.update') }}" method="POST" class="ms-2 mt-4">
                         @csrf
                         <div class="row d-flex justify-content-center">
-                            <div class="row input-group d-flex justify-content-center">
-                                <label class="label" style="padding-left: 142px;">Username</label>
-                                <input autocomplete="off" name="username" class="input text-light" type="text" value="{{ $user->username }}" required>
+                            <div class="form-group row input-group d-flex justify-content-center">
+                                <label for="name" class="label" style="padding-left: 142px;">Username</label>
+                                <input id="name" name="name" class="input text-light" type="text" value="{{ $user->name }}" required autocomplete="off">
                             </div>
-                            <div class="row input-group d-flex justify-content-center mt-3">
-                                <label class="label" style="padding-left: 142px;">Email</label>
-                                <input autocomplete="off" name="email" class="input text-light" type="email" value="{{ $user->email }}" required>
+                            <div class="form-group row input-group d-flex justify-content-center mt-3">
+                                <label for="email" class="label" style="padding-left: 142px;">Email</label>
+                                <input id="email" name="email" class="input text-light" type="email" value="{{ $user->email }}" required autocomplete="off">
                             </div>
-                            <div class="row input-group d-flex justify-content-center mt-3">
-                                <label class="label" style="padding-left: 142px;">Age</label>
-                                <input autocomplete="off" name="age" class="input text-light" type="text" value="{{ $user->age }}" required>
+                            <div class="form-group row input-group d-flex justify-content-center mt-3">
+                                <label for="age" class="label" style="padding-left: 142px;">Age</label>
+                                <input id="age" name="age" class="input text-light" type="text" value="{{ $user->age }}" required autocomplete="off">
                             </div>
-                            <div class="row input-group d-flex justify-content-center mt-3">
-                                <label class="label" style="padding-left: 142px;">Phone Number</label>
-                                <input autocomplete="off" name="number" id="number" class="input text-light" type="text" value="{{ $user->number }}" required>
-                                <div></div>
+                            <div class="form-group row input-group d-flex justify-content-center mt-3">
+                                <label for="phone_number" class="label" style="padding-left: 142px;">Phone Number</label>
+                                <input id="phone_number" name="phone_number" class="input text-light" type="text" value="{{ $user->phone_number }}" required autocomplete="off">
                             </div>
-                            <div class="row input-group d-flex justify-content-center mt-3">
-                                <label class="label" style="padding-left: 142px;">Password</label>
-                                <input autocomplete="off" name="password" class="input text-light" type="password" required>
+                            <div class="form-group row input-group d-flex justify-content-center mt-3">
+                                <label for="password" class="label" style="padding-left: 142px;">Password</label>
+                                <input id="password" name="password" class="input text-light" type="password" required autocomplete="off">
                             </div>
-                            <div class="row input-group d-flex justify-content-center mt-3">
-                                <label class="label" style="padding-left: 142px;">Confirm Password</label>
-                                <input autocomplete="off" name="password_confirmation" class="input text-light" type="password" required>
+                            <div class="form-group row input-group d-flex justify-content-center mt-3">
+                                <label for="password_confirmation" class="label" style="padding-left: 142px;">Confirm Password</label>
+                                <input id="password_confirmation" name="password_confirmation" class="input text-light" type="password" required autocomplete="off">
                             </div>
                             <div class="d-flex justify-content-center mt-4">
                                 <button type="submit" class="btn btn-outline-light btn-block" style="width: 300px;">Update</button>

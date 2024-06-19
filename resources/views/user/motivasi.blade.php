@@ -32,7 +32,7 @@
         </header>
         <p>Ada banyak cara untuk melanjutkan kuliah keluar negeri, salah satunya adalah mendaftarkan diri melalui program Beasiswa Pendidikan Indonesia yang dikelola oleh LPDP. Beasiswa LPDP membuka kesempatan Anda untuk melanjutkan program magister dan doktor di dalam dan luar negeri. Berikut ini adalah wawancara eksklusif langsung dari penerima beasiswa LPDP yang akan menjelaskan tips raih beasiswa LPDP 2017, simak</p>
         <div class="card-body">
-            <a href="#" class="article-link">Read More >></a>
+            <a href="detail-motivasi2" class="article-link">Read More >></a>
         </div>
         <hr class="mt-4" style="width: 1305px;">
     </article>
@@ -43,7 +43,7 @@
         </header>
         <p>Halo teman-teman pencari beasiswa di seluruh nusantara! Kali ini Beasiswa.ID akan membagikan pengalaman nyata dari teman kita Frisca Intan Luzia yang berhasil mendapatkan 9 tawaran beasiswa di universitas luar negeri, sekolah kedinasan serta berhasil lolos SBMPTN. Semoga cerita inspirasi dari Frisca bisa membuat kalian lebih semangat dan melakukan persiapan yang matang sebelum mengajukan aplikasi beasiswa.</p>
         <div class="card-body">
-            <a href="#" class="article-link">Read More >></a>
+            <a href="detail-motivasi3" class="article-link">Read More >></a>
         </div>
         <hr class="mt-4" style="width: 1305px;">
     </article>
@@ -54,7 +54,7 @@
         </header>
         <p>Berbicara mengenai beasiswa pendidikan semua orang pasti sangat ingin mendapatkan beasiswa tersebut, LPDP salah satunya. Beasiswa LPDP merupakan beasiswa paling bergengsi yang di sediakan oleh pemerintah indonesia khusus anak indonesia yang memiliki jiwa kepemimpinan, berprestasi dan berjiwa sosial. Dengan Beasiswa Pendidikan Indonesia (BPI) oleh Lembaga Pengelola Dana Pendidikan (LPDP). Melanjutkan kuliah program master dan doktor</p>
         <div class="card-body">
-            <a href="#" class="article-link">Read More >></a>
+            <a href="detail-motivasi4" class="article-link">Read More >></a>
         </div>
         <hr class="mt-4" style="width: 1305px;">
     </article>

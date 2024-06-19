@@ -99,9 +99,9 @@
                             <div class="row justify-content-center">
                                 <div class="col-md-8">
                                     <div class="form-group">
-                                        <input class="text-light" type="text" id="username" name="username" required>
-                                        <label class="text-light" for="username">Username</label>
-                                        @error('username')
+                                        <input class="text-light" type="text" id="name" name="name" required>
+                                        <label class="text-light" for="name">Username</label>
+                                        @error('name')
                                             <p class="text-danger text-xs mt-2">{{ $message }}</p>
                                         @enderror
                                     </div>
@@ -120,9 +120,9 @@
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <input class="text-light" type="tel" id="number" name="number" required>
-                                        <label class="text-light" for="number">Phone Number</label>
-                                        @error('number')
+                                        <input class="text-light" type="tel" id="phone_number" name="phone_number" required>
+                                        <label class="text-light" for="phone_number">Phone Number</label>
+                                        @error('phone_number')
                                             <p class="text-danger text-xs mt-2">{{ $message }}</p>
                                         @enderror
                                     </div>                          

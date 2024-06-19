@@ -6,99 +6,119 @@
     .card {
         transition: transform 0.3s;
     }
+
     .card:hover {
         transform: translateY(-15px);
     }
-    .hero {
-        background-image: url('/assets/animasi.svg');
-        width: 100%;
-        height: 250px;
+
+    .bookmark-icon {
+        width: 30px;
+        height: 30px;
+        fill: #e8eaed;
+        stroke: black;
+        transition: fill 0.3s, stroke 0.3s;
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
     }
-    .hero-text {
-        padding-top: 80px;
-        font-size: 50px;
-        font-family: Poetsen One, sans-serif;
+
+    .bookmark-icon:hover {
+        fill: black;
     }
-    .scholarship-title {
-        font-size: 25px;
-    }
-    .read-more-link {
-        text-decoration: none;
+
+    .bookmark-icon.saved {
+        fill: black;
+        stroke: black;
     }
 </style>
 
-<header class="hero">
-    <div class="container-fluid text-center">
-        <p class="text-light hero-text">Beasiswa S2</p>
-    </div>
-</header>
 
-<main>
-    <section>
-        <div class="container">
-            <article class="pt-5">
-                <h2 class="scholarship-title"><b>Beasiswa Pendidikan Indonesia (BPI) S2 dari Kemendikbudristek</b></h2>
-                <p>Hai Sobat Beasiswa.ID! Tahun ini Kemendikbudristek kembali mengumumkan penerimaan beasiswa S2 untuk guru dan tenaga kependidikan tujuan studi dalam negeri dan luar negeri. Beasiswa pendidik dan tenaga kependidikan ini ditawarkan mealui Beasiswa Pendidikan Indonesia (BPI) Kemendikbudristek Bergelar. Program beasiswa ini menawarkan beragam jenis beasiswa, salah satunya Beasiswa Pendidik dan Tenaga Kependidikan program S2 di dalam […]</p>
-                <div class="card-body">
-                    <a href="detail-s2" class="read-more-link">Read More >></a>
-                </div>
-                <hr class="mt-4">
-            </article>
-            <article>
-                <h2 class="scholarship-title"><b>Beasiswa CIMB ASEAN untuk Mahasiswa S1 dan S2</b></h2>
-                <p>Hai Sobat Beasiswa.ID! Bagi kamu calon mahasiswa baru Program S1 dan S2 serta mahasiswa on-going (yang sedang berkuliah) dan sedang mencari beasiswa, saat ini CIMB Foundation menawarkan Beasiswa CIMB ASEAN yang bisa kamu coba! Program CIMB ASEAN Scholarship ini ditawarkan bagi pelajar dan mahasiswa dari negara-negara di kawasan ASEAN dalam bentuk Full Scholarship (beasiswa penuh). Berikut informasi selengkapnya</p>
-                <div class="card-body">
-                    <a href="#" class="read-more-link">Read More >></a>
-                </div>
-                <hr class="mt-4">
-            </article>
-            <article>
-                <h2 class="scholarship-title"><b>Beasiswa S2 di Universitas Pertahanan (Unhan)</b></h2>
-                <p>Hai Sobat Beasiswa.ID! Universitas Pertahanan (Unhan) saat ini menawarkan beasiswa kuliah S2 bagi PNS, TNI/POLRI, serta masyarakat umum dan mancanegara. Para peserta yang berhasil mendapatkan Beasiswa UNHAN akan dibebaskan biaya kuliah (gratis biaya perkuliahan) hingga lulus. Mau tahu apa saja persiapan yang perlu dilakukan? Berikut informasi selengkapnya yang berhasil kami himpun. Profil UNHAN (Universitas Pertahanan)</p>
-                <div class="card-body">
-                    <a href="#" class="read-more-link">Read More >></a>
-                </div>
-                <hr class="mt-4">
-            </article>
-            <article>
-                <h2 class="scholarship-title"><b>Beasiswa S2 dan S3 di Universitas Padjadjaran</b></h2>
-                <p>Hai Sobat Beasiswa.ID! Bagi Anda yang sedang mencari beasiswa kuliah S2 – S3 di dalam negeri, informasi beasiswa UNPAD boleh banget nih buat dicoba! Universitas Padjadjaran menyelenggarakan Beasiswa S2 – S3 yang terdiri dari dua skema, yaitu Program Beasiswa Unggulan Pascasarjana Padjadjaran (BUPP) dan Beasiswa Program Doktor Padjadjaran (BPDP) Tahun 2024/2025 bagi masyarakat umum yang</p>
-                <div class="card-body">
-                    <a href="#" class="read-more-link">Read More >></a>
-                </div>
-                <hr class="mt-4">
-            </article>
+    <header class="pt-3">
+        <div class="container-fluid" style="background-image: url('/assets/animasi.svg'); width: 100%; height: 250px;">
+            <h1 class="text-light text-center"
+                style="padding-top: 80px; font-size: 50px; font-family: Poetsen One, sans-serif;">Beasiswa S2</h1>
         </div>
-    </section>
+    </header>
 
-    <section class="container d-flex justify-content-center gap-4 pt-5 mt-3">
-        <div class="row gap-5">
-            @foreach (range(1, 10) as $index)
-            <div class="card shadow" style="width: 18rem;">
-                <img src="https://www.scholarsofficial.com/wp-content/uploads/2022/04/BEASISWA.png" class="card-img-top" alt="Scholarship Image">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <i class="fas fa-clock"></i><span class="ps-1"> WAKTU</span>
-                    </li>
-                    <li class="list-group-item">
-                        <i class="fas fa-map-marker-alt"></i><span class="ps-2"> TEMPAT</span>
-                    </li>
-                    <li class="list-group-item">
-                        <i class="fas fa-users"></i><span class="ps-1"> KUOTA</span>
-                    </li>
-                </ul>
-                <div class="card-body text-center">
-                    <a href="detail" class="card-link read-more-link">Read More >></a>
-                </div>
+    <main>
+        <section class="container d-flex justify-content-center gap-4 pt-5 mt-3">
+            <div class="row gap-5">
+                @if ($beasiswas->isEmpty())
+                    <div class="text-center">
+                        <h3>Oops, data belum tersedia</h3>
+                    </div>
+                @else
+                    @foreach ($beasiswas as $beasiswa)
+                        <div class="card shadow" style="width: 18rem;">
+                            <img src="{{ asset('storage/' . $beasiswa->image) }}" class="card-img-top"
+                                alt="{{ $beasiswa->title }}">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <h2 class="card-title">{{ $beasiswa->title }}</h2>
+                                    <a class="mt-2" href="{{ route('saveBookmark', ['beasiswa' => ':beasiswaId']) }}"
+                                        onclick="handleBookmarkClick(event, {{ $beasiswa->id }})">
+                                        <!-- SVG Bookmark Icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="bookmark-icon {{ $beasiswa->bookmark ? 'saved' : '' }}"
+                                            id="bookmark-icon-{{ $beasiswa->id }}" height="30px" viewBox="0 -960 960 960"
+                                            width="24px" fill="#e8eaed">
+                                            <path
+                                                d="m480-240-168 72q-40 17-76-6.5T200-241v-519q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v519q0 43-36 66.5t-76 6.5l-168-72Z" />
+                                        </svg> </a>
+                                </div>
+                                <p class="card-text">{{ $beasiswa->description_short }}</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <i class="fas fa-clock"></i><span
+                                        class="ps-3">{{ \Carbon\Carbon::parse($beasiswa->waktu)->format('d-m-Y') }}</span>
+                                </li>
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-map-marker-alt"></i><span class="ps-3">{{ $beasiswa->tempat }}</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-users"></i><span class="ps-2">{{ $beasiswa->kuota }}</span>
+                                </li>
+                            </ul>
+                            <div class="card-body text-center">
+                                <a href="{{ route('detail', ['id' => $beasiswa->id]) }}" class="card-link"
+                                    style="text-decoration: none;">Read More >></a>
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
             </div>
-            @endforeach
-        </div>
-    </section>
-</main>
+        </section>
+    </main>
 
-@include('user-app.footer')
+    <footer>
+        @include('user-app.footer')
+    </footer>
+    <script>
+        function handleBookmarkClick(event, beasiswaId) {
+            event.preventDefault();
+            const bookmarkIcon = document.getElementById('bookmark-icon-' + beasiswaId);
+            bookmarkIcon.classList.toggle('saved');
+
+            // Send Ajax request to toggle bookmark status
+            fetch(`{{ route('saveBookmark', ['beasiswa' => ':beasiswaId']) }}`.replace(':beasiswaId', beasiswaId), {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    }
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data); // Optional: handle response if needed
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
 @endsection

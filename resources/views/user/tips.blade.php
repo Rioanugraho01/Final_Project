@@ -36,7 +36,7 @@
                         recommendation letter, tips-tips membuat personal statement, dan lain-lain. Beberapa pembicara
                         dengan bersemangat menceritakan pengalaman mereka dan memberikan tips tentang cara mendapatkan
                         beasiswa di</p>
-                    <a href="#" style="text-decoration: none;">Read More >></a>
+                    <a href="detail-tips2" style="text-decoration: none;">Read More >></a>
                     <hr class="mt-4" style="width: 1305px;">
                 </article>
             </div>
@@ -44,12 +44,9 @@
         <section>
             <div class="container">
                 <article>
-                    <h2 style="font-size: 25px;"><strong>6 Tips Beasiswa Luar Negeri yang Jarang Diketahui</strong></h2>
-                    <p>Tips beasiswa seperti apa yang biasanya kamu dapatkan? Menyiapkan aplikasi jauh hari, menulis esai,
-                        memburu surat rekomendasi, atau menyiapkan sertifikat bahasa Inggris? Itu informasi dasar tapi masih
-                        banyak lagi yang harus kamu tahu supaya tidak kelabakan. Berikut 6 tips beasiswa luar negeri yang
-                        jarang ditulis. Jangan Fokus pada Deadline Beasiswa Saja, Tapi Kuliahnya Juga Sebagian</p>
-                    <a href="#" style="text-decoration: none;">Read More >></a>
+                    <h2 style="font-size: 25px;"><strong>Bingung Antara Kerja atau Langsung S2? Ini Alasan Mengapa Kamu Harus Tunda S2 Kamu</strong></h2>
+                    <p>Langsung kerja atau lanjut S2? Dilema ini sering dirasakan oleh fresh graduates atau mereka yang baru saja mendapatkan gelar sarjana. Tentu setiap pilihan memiliki pro dan kontranya sendiri. Bagi para fresh graduates di bidang tertentu seperti kesehatan atau psikologi yang memilih untuk langsung melanjutkan S2 telah menentukan pilihan yang tepat. Namun, para fresh graduates dari</p>
+                    <a href="detail-tips3" style="text-decoration: none;">Read More >></a>
                     <hr class="mt-4" style="width: 1305px;">
                 </article>
             </div>
@@ -63,7 +60,7 @@
                         negeri, tapi bisa nggak ya?” Well, beberapa pertanyaan di atas sering banget kita pikirkan saat kita
                         melihat seseorang berhasil mendapatkan beasiswa untuk kuliah di luar negeri. Kita bertanya-tanya dan
                         bahkan sempat ragu apakah kita bisa atau nggak untuk lolos beasiswa</p>
-                    <a href="#" style="text-decoration: none;">Read More >></a>
+                    <a href="detail-tips4" style="text-decoration: none;">Read More >></a>
                     <hr class="mt-4" style="width: 1305px;">
                 </article>
             </div>

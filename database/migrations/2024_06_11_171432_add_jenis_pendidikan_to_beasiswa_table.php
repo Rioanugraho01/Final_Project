@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ModifyUsernameInUsersTable extends Migration
+class AddJenisPendidikanToBeasiswaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class ModifyUsernameInUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('username')->nullable(false)->change();
+        Schema::table('beasiswa', function (Blueprint $table) {
+            $table->string('jenis_pendidikan')->after('kontak')->nullable();
         });
     }
 
@@ -25,9 +25,8 @@ class ModifyUsernameInUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('username')->nullable()->change();
+        Schema::table('beasiswa', function (Blueprint $table) {
+            $table->dropColumn('jenis_pendidikan');
         });
     }
 }
-

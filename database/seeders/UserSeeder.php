@@ -18,20 +18,20 @@ class UserSeeder extends Seeder
     {
 
         $admin = User::create([
-            'username' => 'Admin',
+            'name' => 'Admin',
             'email' => 'admin123@gmail.com',
             'age' => '21',
-            'number' => '081645364532',
+            'phone_number' => '081645364532',
             'password' => bcrypt('12345678'),
         ]);
 
         $admin->assignRole('admin');
 
         $user = User::create([
-            'username' => 'User',
+            'name' => 'User',
             'email' => 'user@kawankoding.id',
             'age' => '22',
-            'number' => '081485367382',
+            'phone_number' => '081485367382',
             'password' => bcrypt('12345678'),
         ]);
 

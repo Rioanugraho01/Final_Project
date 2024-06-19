@@ -44,6 +44,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+        <link rel="icon" type="image/png" href="../assets/befind.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-Z1M4tP3I+IOr3BdpbH/DmHi+oXZBqYaV8T8Vu2/Sx33o7nb+tUe2q1sUm5VIyHMPmXh92H51M3yL+xTYf/60TQ=="
@@ -52,7 +53,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <style>
     .fade-in {
@@ -75,7 +76,7 @@
     {{-- Navbar --}}
     <nav class="navbar navbar-expand-lg">
         <div class="container d-flex justify-content-center pt-4">
-            <a href=""><img src="/assets/logoo.png" class="img-fluid" style="width: 100px; height: auto;"
+            <a href="/"><img src="/assets/logoo.png" class="img-fluid" style="width: 100px; height: auto;"
                     alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -87,35 +88,32 @@
                     <p class="nav-item">
                         <a class="nav-link fw-medium" href="{{ url('about') }}">About</a>
                     </p>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown text-dark">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Beasiswa
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="menu">Beasiswa S1</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="menu">Beasiswa S2</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="menu">Beasiswa S3</a></li>
-                        </ul>
+                        <ul class="dropdown-menu text-dark">
+                            <li><a class="dropdown-item" href="{{ route('s1') }}">Beasiswa S1</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ route('s2') }}">Beasiswa S2</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ route('s3') }}">Beasiswa S3</a></li>
+                        </ul>                        
                     </li>
-                    <p class="nav-item">
-                        <a class="nav-link fw-medium" href="tips">tips</a>
+                    <p class="nav-item mt-2">
+                        <a class="text-decoration-none text-dark ms-2" href="{{ route('tips') }}">Tips</a>
                     </p>
-                    <p class="nav-item">
-                        <a class="nav-link fw-medium" href="motivasi">Motivasi</a>
+                    <p class="nav-item mt-2">
+                        <a class="text-decoration-none text-dark ms-3" href="{{ route('motivasi') }}">Motivasi</a>
                     </p>
                     @if (Route::has('login'))
                         @auth
-                        <div class="collapse navbar-collapse mb-3" id="navbarSupportedContent">
-                            <form class="d-flex" role="search">
-                                <input class="form-control me-2" style="border-color: black;" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-dark" type="submit">Search</button>
+                        <div class="collapse navbar-collapse mb-3 ms-3" id="navbarSupportedContent">
+                            <form class="d-flex" role="search" action="{{ route('search') }}" method="GET">
+                                <input class="form-control me-2" style="border-color: black;" type="search"
+                                    placeholder="Search" aria-label="Search" name="query">
+                                <button class="btn btn-outline-dark w-50" type="submit">Search</button>
                             </form>
                         </div>
                         @endauth
@@ -126,12 +124,13 @@
                 <div class="d-flex justify-content-end gap-3 fade-in">
                     @if (Route::has('login'))
                         @auth
-                            <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-user me-sm-1"></i>
-                                <span>Hello, {{ Auth::user()->username }}</span>
+                                <span>Hello, {{ Auth::user()->name }}</span>
                             </button>
-                            <div class="dropdown-menu mt-5" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="profile">Profile</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item text-decoration-none text-dark px-3" href="{{ route('profile') }}">Profile</a></li>
+                                <li><a class="dropdown-item text-decoration-none text-dark px-3" href="{{ route('keep') }}">Keep</a></li>
                                 <a class="dropdown-item" href="{{ url('/logout') }}">Logout</a>
                             </div>
                         @else

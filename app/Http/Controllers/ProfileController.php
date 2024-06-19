@@ -17,18 +17,18 @@ class ProfileController extends Controller
     public function updateProfile(Request $request)
     {
         $request->validate([
-            'username' => 'required|string|max:255',
+            'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255',
             'age' => 'nullable|integer|min:0',
-            'number' => 'nullable|string|max:20',
+            'phone_number' => 'nullable|string|max:20',
             'password' => 'nullable|string|min:8|confirmed',
         ]);
 
         $user = Auth::user();
-        $user->username = $request->input('username');
+        $user->name = $request->input('name');
         $user->email = $request->input('email');
         $user->age = $request->input('age');
-        $user->number = $request->input('number');
+        $user->phone_number = $request->input('phone_number');
 
         if ($request->filled('password')) {
             $user->password = Hash::make($request->input('password'));

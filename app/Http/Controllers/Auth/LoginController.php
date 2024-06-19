@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 use Exception;
 use App\Models\User;
-
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class LoginController extends Controller
 {
@@ -46,27 +47,29 @@ class LoginController extends Controller
     }
 
     public function handleGoogleCallback()
-    {
-        try {
-            $user = Socialite::driver('google')->user();
-            $existingUser = User::where('email', $user->email)->first();
+{
+    
+        $user = Socialite::driver('google')->user();
+        $existingUser = User::where('email', $user->email)->first();
 
-            if ($existingUser) {
-                Auth::login($existingUser);
-            } else {
-                $newUser = new User();
-                $newUser->name = $user->name;
-                $newUser->email = $user->email;
-                $newUser->save();
+        if ($existingUser) {
+            Auth::login($existingUser);
+        } else {
+            $newUser = new User();
+            $newUser->google_id = $user->id;
+            $newUser->name = $user->name;
+            $newUser->email = $user->email;
+            $newUser->phone_number = null;
+            $newUser->password = Hash::make(Str::random(15));
+            $newUser->age = 25;
+            $newUser->save();
 
-                Auth::login($newUser);
-            }
-
-            return redirect('/menu');
-        } catch (Exception $e) {
-            return redirect()->route('login')->with('error', 'Login with Google failed. Please try again.');
+            $newUser->assignRole('user'); 
+            Auth::login($newUser);
         }
-    }
+
+        return redirect()->route('menu');
+}
 
     public function __construct()
     {
@@ -77,7 +80,7 @@ class LoginController extends Controller
     public function authenticated(Request $request, $user)
     {
         if ($user->hasRole('admin')) {
-            return view('dashboard');
+            return redirect()->route('dashboard');
         }
 
         return redirect()->route('menu');
